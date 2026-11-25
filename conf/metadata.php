@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @author Tassoman <tassoman@gmail.com>
+ * @license AGPLv3
+ */
+
 $meta['watermark_text']     = array('string');
 $meta['font_file']          = array('string');
 $meta['font_size']          = array('numeric', '_min' => 1, '_max' => 100);
