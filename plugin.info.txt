@@ -1,0 +1,7 @@
+base   textmark
+author tassoman
+email  tassoman@gmail.com
+date   2026-11-24
+name   Textmark Plugin
+desc   Automatically applies configurable text watermarks to media images on-the-fly
+url    https://www.dokuwiki.org/plugin:textmark
