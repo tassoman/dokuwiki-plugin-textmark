@@ -167,5 +167,4 @@ class ImageMagickWatermarker extends Watermarker
     {
         return sprintf('%gx%s', $angle, $offset);
     }
-
 }
