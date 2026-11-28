@@ -1,0 +1,27 @@
+{
+    "name": "tassoman/dokuwiki-plugin-textmark",
+    "description": "Textmark plugin for DokuWiki",
+    "type": "dokuwiki-plugin",
+    "authors": [
+        {
+            "name": "Tassoman",
+            "email": "tassoman@gmail.com",
+            "homepage": "https://tassoman.com",
+            "role": "Author"
+        }
+    ],
+    "license": "AGPL-3.0-or-later",
+    "homepage": "https://dokuwiki.org/plugin:textmark",
+    "require": {
+        "php": ">=8.3"
+    },
+    "scripts": {
+        "test": "DOKUWIKI_DIR=${DOKUWIKI_DIR:-$(cd ../../.. && pwd)}; php \"$DOKUWIKI_DIR/_test/vendor/bin/phpunit\" -c \"$DOKUWIKI_DIR/_test/phpunit.xml\" --group plugin_textmark",
+        "cs": "DOKUWIKI_DIR=${DOKUWIKI_DIR:-$(cd ../../.. && pwd)}; php \"$DOKUWIKI_DIR/_test/vendor/bin/phpcs\" --standard=\"$DOKUWIKI_DIR/_test/phpcs.xml\" --ignore=*/vendor/*,*/.git/* .",
+        "cbf": "DOKUWIKI_DIR=${DOKUWIKI_DIR:-$(cd ../../.. && pwd)}; php \"$DOKUWIKI_DIR/_test/vendor/bin/phpcbf\" --standard=\"$DOKUWIKI_DIR/_test/phpcs.xml\" --ignore=*/vendor/*,*/.git/* .",
+        "check": [
+            "@cs",
+            "@test"
+        ]
+    }
+}

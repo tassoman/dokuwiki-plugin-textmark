@@ -29,8 +29,8 @@ class FontResolver
 
     private const EXTENSIONS = ['ttf', 'otf'];
 
-    private string $pluginDir;
-    private string $defaultFont;
+    private readonly string $pluginDir;
+    private readonly string $defaultFont;
 
     public function __construct(string $pluginDir, string $defaultFont)
     {

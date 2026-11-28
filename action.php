@@ -8,6 +8,7 @@ use dokuwiki\plugin\textmark\classes\GdWatermarker;
 use dokuwiki\plugin\textmark\classes\ImageMagickWatermarker;
 use dokuwiki\plugin\textmark\classes\Watermarker;
 
+// phpcs:ignore Squiz.Classes.ValidClassName.NotCamelCaps
 class action_plugin_textmark extends ActionPlugin
 {
     public function register(EventHandler $controller)
@@ -123,7 +124,7 @@ class action_plugin_textmark extends ActionPlugin
     private function siteUrl(): string
     {
         if (defined('DOKU_URL') && DOKU_URL !== '') {
-            return rtrim((string)DOKU_URL, '/');
+            return rtrim(DOKU_URL, '/');
         }
 
         global $conf;
@@ -200,11 +201,11 @@ class action_plugin_textmark extends ActionPlugin
         }
 
         $mediaNs  = getNS($mediaId);
-        $excludes = array_filter(array_map('trim', explode(',', $rawExcludes)));
+        $excludes = array_filter(array_map(trim(...), explode(',', $rawExcludes)));
 
         foreach ($excludes as $ns) {
             $ns = cleanID($ns);
-            if ($ns !== '' && ($mediaNs === $ns || strpos($mediaNs . ':', $ns . ':') === 0)) {
+            if ($ns !== '' && ($mediaNs === $ns || str_starts_with($mediaNs . ':', $ns . ':'))) {
                 return true;
             }
         }

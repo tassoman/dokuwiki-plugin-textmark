@@ -15,7 +15,7 @@ class ImageMagickWatermarker extends Watermarker
         'center' => 'Center',
     ];
 
-    private string $binary;
+    private readonly string $binary;
 
     public function __construct(array $config, string $fontPath, string $binary)
     {
@@ -167,5 +167,4 @@ class ImageMagickWatermarker extends Watermarker
     {
         return sprintf('%gx%s', $angle, $offset);
     }
-
 }

@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @author Tassoman
+ * @license AGPL-3.0
+ */
+
 $lang['watermark_text']     = 'Text to render as a watermark. Leave empty to auto-generate "©{year} {wiki title}", falling back to the base URL when no title is set.';
 $lang['font_file']          = 'Font file. Upload a .ttf or .otf through the media manager and enter its id (e.g. <code>fonts:myfont.ttf</code>), or a path relative to the plugin (e.g. <code>fonts/default.ttf</code>). Leave empty to use the bundled font.';
 $lang['font_size']          = 'Font size as a percentage (1-100) of the image\'s shorter side, so the watermark scales with the picture';

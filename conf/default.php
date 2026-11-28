@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @author Tassoman <tassoman@gmail.com>
+ * @license AGPLv3
+ */
+
 // Empty watermark_text means "not configured": the plugin then generates
 // "(c){year} {wiki title}", or the base URL when the title is empty.
 $conf['watermark_text']     = '';
